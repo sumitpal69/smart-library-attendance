@@ -1,0 +1,931 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f7f9ff;
+  --card: #ffffff;
+  --text: #20243a;
+  --muted: #777d92;
+  --border: #e8eaf2;
+
+  --blue: #5b8def;
+  --purple: #756dff;
+  --green: #42b883;
+  --orange: #f2a65a;
+
+  --shadow:
+    0 12px 35px rgba(45, 53, 90, 0.08);
+}
+
+body {
+  margin: 0;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: var(--text);
+
+  background:
+
+    radial-gradient(
+      circle at 5% 5%,
+      #e8f5ff,
+      transparent 25%
+    ),
+
+    radial-gradient(
+      circle at 95% 10%,
+      #fff0f7,
+      transparent 25%
+    ),
+
+    var(--bg);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.app {
+  width: min(1150px, 94%);
+  margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.topbar {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 25px 0;
+}
+
+.brand {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+.brand-icon {
+
+  width: 55px;
+  height: 55px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 18px;
+
+  font-size: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #e9e7ff
+    );
+
+  box-shadow:
+
+    inset 0 -6px 10px
+    rgba(0,0,0,.05),
+
+    0 8px 17px
+    rgba(40,50,90,.10);
+}
+
+.brand h1 {
+
+  margin: 0;
+
+  font-size: 22px;
+}
+
+.brand p {
+
+  margin: 3px 0 0;
+
+  color: var(--muted);
+
+  font-size: 12px;
+}
+
+
+/* SYSTEM STATUS */
+
+.live-status {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 9px 13px;
+
+  border-radius: 13px;
+
+  background: #eafaf1;
+
+  color: #258658;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.live-status span {
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #35b779;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(53,183,121,.12);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 40px;
+
+  margin-bottom: 22px;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f0f2ff,
+      #fff2f7
+    );
+
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+
+  color: var(--purple);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: .14em;
+}
+
+.hero h2 {
+
+  margin: 8px 0;
+
+  font-size:
+    clamp(32px, 5vw, 50px);
+
+  line-height: 1.04;
+}
+
+.hero p {
+
+  max-width: 600px;
+
+  color: var(--muted);
+
+  line-height: 1.6;
+
+  font-size: 14px;
+}
+
+.hero-icon {
+
+  width: 125px;
+  height: 125px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 35px;
+
+  font-size: 55px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #e8e8ff
+    );
+
+  box-shadow:
+
+    inset 0 -10px 15px
+    rgba(0,0,0,.06),
+
+    0 14px 28px
+    rgba(50,60,100,.12);
+
+  transform: rotate(4deg);
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.stats {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 14px;
+
+  margin-bottom: 22px;
+}
+
+.stat {
+
+  padding: 19px;
+
+  border-radius: 22px;
+
+  background: white;
+
+  border:
+    1px solid var(--border);
+
+  box-shadow: var(--shadow);
+}
+
+.stat-icon {
+
+  width: 47px;
+  height: 47px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 15px;
+
+  font-size: 22px;
+
+  margin-bottom: 11px;
+
+  box-shadow:
+
+    inset 0 -5px 8px
+    rgba(0,0,0,.05),
+
+    0 5px 10px
+    rgba(40,50,90,.07);
+}
+
+.blue .stat-icon {
+  background: #e7f3ff;
+}
+
+.purple .stat-icon {
+  background: #eeecff;
+}
+
+.green .stat-icon {
+  background: #e7faef;
+}
+
+.orange .stat-icon {
+  background: #fff1df;
+}
+
+.stat span {
+
+  display: block;
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  margin-bottom: 5px;
+}
+
+.stat strong {
+
+  font-size: 25px;
+}
+
+
+/* =========================
+   MAIN GRID
+========================= */
+
+.main-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 22px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+
+  padding: 25px;
+
+  margin-bottom: 22px;
+
+  border-radius: 26px;
+
+  background:
+    rgba(255,255,255,.96);
+
+  border:
+    1px solid var(--border);
+
+  box-shadow: var(--shadow);
+}
+
+.card-heading {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 22px;
+}
+
+.card-heading small {
+
+  color: var(--purple);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: .14em;
+}
+
+.card-heading h3 {
+
+  margin: 5px 0 0;
+
+  font-size: 21px;
+}
+
+.card-icon {
+
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 16px;
+
+  background: #f0efff;
+
+  font-size: 23px;
+
+  box-shadow:
+
+    inset 0 -5px 8px
+    rgba(0,0,0,.04),
+
+    0 5px 12px
+    rgba(40,50,90,.08);
+}
+
+
+/* =========================
+   ATTENDANCE CIRCLE
+========================= */
+
+.attendance-circle {
+
+  width: 190px;
+  height: 190px;
+
+  margin: 8px auto 25px;
+
+  border-radius: 50%;
+
+  display: grid;
+
+  place-items: center;
+
+  position: relative;
+
+  background:
+    conic-gradient(
+      var(--purple) 0deg 309deg,
+      #e9eaf4 309deg 360deg
+    );
+}
+
+.attendance-circle::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+
+  background: white;
+}
+
+.attendance-circle > div {
+
+  position: relative;
+
+  text-align: center;
+}
+
+.attendance-circle strong {
+
+  display: block;
+
+  font-size: 36px;
+}
+
+.attendance-circle span {
+
+  color: var(--muted);
+
+  font-size: 11px;
+}
+
+
+/* =========================
+   ATTENDANCE DETAILS
+========================= */
+
+.attendance-details {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 10px;
+}
+
+.attendance-details div {
+
+  padding: 13px;
+
+  text-align: center;
+
+  border-radius: 14px;
+
+  background: #f7f8fc;
+}
+
+.attendance-details span {
+
+  display: block;
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  margin-bottom: 4px;
+}
+
+.attendance-details b {
+
+  font-size: 18px;
+}
+
+
+/* =========================
+   CAMERAS
+========================= */
+
+.camera-list {
+
+  display: grid;
+
+  gap: 11px;
+}
+
+.camera {
+
+  display: grid;
+
+  grid-template-columns:
+    45px 1fr auto;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 13px;
+
+  border-radius: 16px;
+
+  background: #fafbff;
+
+  border:
+    1px solid #eef0f7;
+}
+
+.camera-symbol {
+
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 13px;
+
+  background: #eaf3ff;
+
+  font-size: 20px;
+}
+
+.camera strong {
+
+  display: block;
+
+  font-size: 12px;
+}
+
+.camera span {
+
+  display: block;
+
+  color: var(--muted);
+
+  font-size: 10px;
+
+  margin-top: 3px;
+}
+
+.online {
+
+  color: #24925b;
+
+  font-size: 10px;
+}
+
+.offline {
+
+  color: #d46a6a;
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table {
+
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.table-header,
+.table-row {
+
+  min-width: 680px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.3fr
+    1fr
+    1fr
+    .8fr
+    1fr;
+
+  gap: 12px;
+
+  align-items: center;
+}
+
+.table-header {
+
+  padding: 10px 13px;
+
+  color: var(--muted);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+.table-row {
+
+  padding: 14px 13px;
+
+  border-bottom:
+    1px solid #f0f1f6;
+
+  font-size: 11px;
+}
+
+.table-row:last-child {
+
+  border-bottom: 0;
+}
+
+.method {
+
+  padding: 6px 8px;
+
+  width: fit-content;
+
+  border-radius: 8px;
+
+  background: #eeecff;
+
+  color: #5b53d7;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+.manual {
+
+  background: #fff3df;
+
+  color: #a66b16;
+}
+
+.present {
+
+  color: #29945f;
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   AI INFORMATION
+========================= */
+
+.info-card {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 22px;
+
+  margin-bottom: 22px;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f0efff,
+      #f8f8ff
+    );
+
+  border:
+    1px solid #e6e4ff;
+}
+
+.info-icon {
+
+  width: 55px;
+  height: 55px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 17px;
+
+  background: white;
+
+  font-size: 27px;
+
+  box-shadow:
+    0 7px 14px
+    rgba(60,60,110,.08);
+}
+
+.info-card h3 {
+
+  margin: 0 0 5px;
+
+  font-size: 17px;
+}
+
+.info-card p {
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+  text-align: center;
+
+  padding: 5px 0 30px;
+
+  color: var(--muted);
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width: 850px) {
+
+  .stats {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .main-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 620px) {
+
+  .app {
+
+    width: 92%;
+  }
+
+  .topbar {
+
+    padding: 18px 0;
+  }
+
+  .brand h1 {
+
+    font-size: 18px;
+  }
+
+  .live-status {
+
+    font-size: 9px;
+
+    padding: 7px 9px;
+  }
+
+  .hero {
+
+    padding: 28px;
+
+    border-radius: 24px;
+  }
+
+  .hero h2 {
+
+    font-size: 34px;
+  }
+
+  .hero-icon {
+
+    width: 75px;
+    height: 75px;
+
+    font-size: 34px;
+
+    border-radius: 22px;
+  }
+
+  .card {
+
+    padding: 20px;
+
+    border-radius: 22px;
+  }
+
+  .camera {
+
+    grid-template-columns:
+      42px 1fr;
+  }
+
+  .camera b {
+
+    grid-column: 2;
+  }
+
+}
+
+
+/* =========================
+   SMALL PHONE
+========================= */
+
+@media(max-width: 420px) {
+
+  .stats {
+
+    grid-template-columns: 1fr;
+  }
+
+  .hero-icon {
+
+    display: none;
+  }
+
+  .brand-icon {
+
+    width: 46px;
+    height: 46px;
+  }
+
+  .brand p {
+
+    font-size: 10px;
+  }
+
+  .attendance-circle {
+
+    width: 165px;
+    height: 165px;
+  }
+
+  .attendance-circle::before {
+
+    width: 130px;
+    height: 130px;
+  }
+
+}
