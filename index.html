@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Smart Library Attendance</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- HEADER -->
+
+  <header class="topbar">
+
+    <div class="brand">
+
+      <div class="brand-icon">
+        📚
+      </div>
+
+      <div>
+
+        <h1>
+          Smart Library
+        </h1>
+
+        <p>
+          Intelligent Attendance System
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="live-status">
+      <span></span>
+      System Online
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div>
+
+      <span class="eyebrow">
+        LIBRARY ATTENDANCE
+      </span>
+
+      <h2>
+        Attendance,<br>
+        made smarter.
+      </h2>
+
+      <p>
+        Monitor library attendance, camera
+        status and daily activity from one
+        simple dashboard.
+      </p>
+
+    </div>
+
+    <div class="hero-icon">
+      🎥
+    </div>
+
+  </section>
+
+
+  <!-- STATISTICS -->
+
+  <section class="stats">
+
+
+    <div class="stat blue">
+
+      <div class="stat-icon">
+        👥
+      </div>
+
+      <span>
+        Present Today
+      </span>
+
+      <strong id="presentCount">
+        86
+      </strong>
+
+    </div>
+
+
+    <div class="stat purple">
+
+      <div class="stat-icon">
+        📋
+      </div>
+
+      <span>
+        Total Students
+      </span>
+
+      <strong id="totalStudents">
+        100
+      </strong>
+
+    </div>
+
+
+    <div class="stat green">
+
+      <div class="stat-icon">
+        📈
+      </div>
+
+      <span>
+        Attendance
+      </span>
+
+      <strong id="attendancePercent">
+        86%
+      </strong>
+
+    </div>
+
+
+    <div class="stat orange">
+
+      <div class="stat-icon">
+        ⏰
+      </div>
+
+      <span>
+        Late Today
+      </span>
+
+      <strong id="lateCount">
+        7
+      </strong>
+
+    </div>
+
+
+  </section>
+
+
+  <!-- MAIN GRID -->
+
+  <section class="main-grid">
+
+
+    <!-- ATTENDANCE -->
+
+    <article class="card">
+
+      <div class="card-heading">
+
+        <div>
+
+          <small>
+            TODAY
+          </small>
+
+          <h3>
+            Attendance Overview
+          </h3>
+
+        </div>
+
+        <div class="card-icon">
+          📊
+        </div>
+
+      </div>
+
+
+      <div class="attendance-circle">
+
+        <div>
+
+          <strong>
+            86%
+          </strong>
+
+          <span>
+            Present
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="attendance-details">
+
+        <div>
+
+          <span>
+            Present
+          </span>
+
+          <b>
+            86
+          </b>
+
+        </div>
+
+        <div>
+
+          <span>
+            Absent
+          </span>
+
+          <b>
+            14
+          </b>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- CAMERA STATUS -->
+
+    <article class="card">
+
+      <div class="card-heading">
+
+        <div>
+
+          <small>
+            CCTV
+          </small>
+
+          <h3>
+            Camera Status
+          </h3>
+
+        </div>
+
+        <div class="card-icon">
+          📹
+        </div>
+
+      </div>
+
+
+      <div class="camera-list">
+
+
+        <div class="camera">
+
+          <div class="camera-symbol">
+            📷
+          </div>
+
+          <div>
+
+            <strong>
+              Entrance Camera
+            </strong>
+
+            <span>
+              Main entrance
+            </span>
+
+          </div>
+
+          <b class="online">
+            ● Online
+          </b>
+
+        </div>
+
+
+        <div class="camera">
+
+          <div class="camera-symbol">
+            📷
+          </div>
+
+          <div>
+
+            <strong>
+              Reading Hall
+            </strong>
+
+            <span>
+              Ground floor
+            </span>
+
+          </div>
+
+          <b class="online">
+            ● Online
+          </b>
+
+        </div>
+
+
+        <div class="camera">
+
+          <div class="camera-symbol">
+            📷
+          </div>
+
+          <div>
+
+            <strong>
+              Second Floor
+            </strong>
+
+            <span>
+              Study area
+            </span>
+
+          </div>
+
+          <b class="offline">
+            ● Offline
+          </b>
+
+        </div>
+
+
+      </div>
+
+    </article>
+
+
+  </section>
+
+
+  <!-- RECENT ATTENDANCE -->
+
+  <section class="card">
+
+    <div class="card-heading">
+
+      <div>
+
+        <small>
+          LIVE RECORD
+        </small>
+
+        <h3>
+          Recent Attendance
+        </h3>
+
+      </div>
+
+      <div class="card-icon">
+        🕐
+      </div>
+
+    </div>
+
+
+    <div class="table">
+
+
+      <div class="table-header">
+
+        <span>
+          Student
+        </span>
+
+        <span>
+          Time
+        </span>
+
+        <span>
+          Camera
+        </span>
+
+        <span>
+          Method
+        </span>
+
+        <span>
+          Status
+        </span>
+
+      </div>
+
+
+      <div class="table-row">
+
+        <strong>
+          Student 001
+        </strong>
+
+        <span>
+          08:41 AM
+        </span>
+
+        <span>
+          Entrance
+        </span>
+
+        <span class="method">
+          Face
+        </span>
+
+        <b class="present">
+          ✓ Present
+        </b>
+
+      </div>
+
+
+      <div class="table-row">
+
+        <strong>
+          Student 002
+        </strong>
+
+        <span>
+          08:44 AM
+        </span>
+
+        <span>
+          Entrance
+        </span>
+
+        <span class="method">
+          Face
+        </span>
+
+        <b class="present">
+          ✓ Present
+        </b>
+
+      </div>
+
+
+      <div class="table-row">
+
+        <strong>
+          Student 003
+        </strong>
+
+        <span>
+          08:49 AM
+        </span>
+
+        <span>
+          Reading Hall
+        </span>
+
+        <span class="method manual">
+          Manual
+        </span>
+
+        <b class="present">
+          ✓ Present
+        </b>
+
+      </div>
+
+
+      <div class="table-row">
+
+        <strong>
+          Student 004
+        </strong>
+
+        <span>
+          09:02 AM
+        </span>
+
+        <span>
+          Entrance
+        </span>
+
+        <span class="method">
+          Face
+        </span>
+
+        <b class="present">
+          ✓ Present
+        </b>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- AI INFORMATION -->
+
+  <section class="info-card">
+
+    <div class="info-icon">
+      🤖
+    </div>
+
+    <div>
+
+      <h3>
+        Automatic Recognition
+      </h3>
+
+      <p>
+        The future version will connect the
+        library's authorized CCTV system to
+        an AI recognition service. Matches will
+        be confirmed across multiple observations
+        before attendance is recorded.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+
+    <p>
+      Smart Library Attendance · Prototype
+    </p>
+
+  </footer>
+
+
+</div>
+
+</body>
+
+</html>
